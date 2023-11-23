@@ -59,7 +59,7 @@ header button {
     cursor: pointer;
 }
 
-.add-player__form{
+.add-player__form {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.432);
     display: flex;
@@ -73,12 +73,12 @@ header button {
     visibility: hidden;
 }
 
-.add-player__form.show{
+.add-player__form.show {
     opacity: 1;
     visibility: visible;
 }
 
-.add-player__form--inputs{
+.add-player__form--inputs {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -86,7 +86,7 @@ header button {
     overflow: auto;
 }
 
-.add-player__form>button:first-of-type{
+.add-player__form>button:first-of-type {
     border: 2px solid var(--primary-color);
     width: 40px;
     height: 40px;
@@ -165,6 +165,7 @@ header button {
     width: 50%;
     display: none;
 }
+
 .winner.show,
 .loser.show {
     display: block;
