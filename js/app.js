@@ -13,18 +13,17 @@ btnOptionTow.addEventListener('click',_=>{
 
 
 
-playArea.addEventListener('mousedown',_=>{
+playArea.addEventListener('touchmove',e=>{
+    let top = e.touches[0].pageY
+    let left = e.touches[0].pageX
+
     gameMode.classList.remove('show')
     liNumWin.classList.remove('show')
     header.style.top='-100%'
-    playArea.innerHTML=`<div class="player"></div>`
-})
-playArea.addEventListener('mousemove',e=>{
-    let player=document.querySelector('.player')
-    player?player.style=`top:${e.pageY}px;left:${e.pageX}px`:null;
+    playArea.innerHTML=`<div class="player" style='top:${top}px;left:${left}px'></div>`
 })
 
-playArea.addEventListener('mouseup',_=>{
+playArea.addEventListener('touchend',_=>{
     playArea.innerHTML=``
     header.style.top='0'
 })
