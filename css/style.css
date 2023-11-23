@@ -13,8 +13,16 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+button,
+input {
     font-family: 'Marhey', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--bg-body);
+    position: relative;
 }
 
 ul li {
@@ -33,10 +41,7 @@ header {
     padding: 14px;
     background-color: var(--bg-header);
     margin-inline: 4px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    /* position: relative; */
     transition: .7s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
     z-index: 999;
@@ -52,7 +57,46 @@ header button {
     color: var(--primary-color);
     font-size: 22px;
     cursor: pointer;
+}
 
+.add-player__form{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    inset: 0;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.add-player__form.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.add-player__form--inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.add-player__form>button:first-of-type{
+    border: 2px solid var(--primary-color);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .logo {
@@ -61,45 +105,11 @@ header button {
     font-size: 20px;
 }
 
-.option-one ul {
-    position: absolute;
-    background-color: var(--bg-header);
-    top: 70px;
-    transform: scaleY(0);
-    transform-origin: top;
-    opacity: 0;
-    visibility: hidden;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
-    -webkit-transform: scaleY(0);
-    -moz-transform: scaleY(0);
-    -ms-transform: scaleY(0);
-    -o-transform: scaleY(0);
-}
 
-.option-one ul.show {
-    transform: scaleY(1);
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: scaleY(1);
-    -moz-transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    -o-transform: scaleY(1);
-}
 
-.option-one ul h3 {
-    padding: 7px 7px 0;
-    color: var(--light-color);
-}
 
-.option-one ul li {
-    text-align: center;
-    cursor: pointer;
-    color: var(--light-color);
-}
+
+
 
 .active {
     color: var(--primary-color) !important;
@@ -141,11 +151,51 @@ header button {
 }
 
 .body {
-    background-color: var(--bg-body);
-    height: 100vh;
-    position: relative;
+    height: calc(100vh - 63px);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
 }
 
+.winner,
+.loser {
+    text-align: center;
+    width: 50%;
+    display: none;
+}
+.winner.show,
+.loser.show {
+    display: block;
+}
+
+.winner h2,
+.loser h2 {
+    background-color: var(--bg-header);
+    width: 80%;
+    margin: auto;
+}
+
+.win-name,
+.lose-name {
+    background-color: var(--light-color);
+    width: 80%;
+    margin: auto;
+    padding-block: 50px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.btn-play {
+    background-color: transparent;
+    border: none;
+    font-size: 80px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* 
 .player {
     width: 100px;
     height: 100px;
@@ -161,4 +211,4 @@ header button {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-}
+} */
