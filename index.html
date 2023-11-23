@@ -13,16 +13,17 @@
 
 <body>
     <header>
-        <div class="option-one">
-            <button><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-            <ul class="">
-                <h3>عدد الفائزين</h3>
-                <li>1</li>
-                <li class="active">2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
+        <div class="add-player">
+            <button id="openForm">اضافة لاعبين</button>
+            <div class="add-player__form">
+                <div class="add-player__form--inputs">
+                    <input type="text">
+                    <input type="text">
+                </div>
+                <button id="addInputToForm">+</button>
+                <button id="addPlayerBtn">اضافة الاسماء</button>
+                <button id="closeForm">الغاء</button>
+            </div>
         </div>
         <div class="logo">CHOOSER</div>
         <div class="option-tow">
@@ -37,7 +38,15 @@
         </div>
     </header>
     <div class="body">
-        
+        <div class="loser">
+            <h2>الخاسر</h2>
+            <p class="lose-name">احمد</p>
+        </div>
+        <div class="winner">
+            <h2>الفائز</h2>
+            <p class="win-name">سعيد</p>
+        </div>
+        <button class="btn-play">ابداء</button>
     </div>
     <script src="js/app.js"></script>
 </body>
