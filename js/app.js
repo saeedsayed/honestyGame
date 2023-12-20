@@ -39,7 +39,7 @@ openFormBtn.addEventListener('click', _ => {
 })
 closeFormBtn.addEventListener('click', _ => {
     addPlayersForm.classList.remove('show')
-    players = JSON.parse(localStorage.getItem('playersName'))
+    players = JSON.parse(localStorage.getItem('playersName')) || []
 })
 
 addInputToForm.addEventListener('click', createInput)
