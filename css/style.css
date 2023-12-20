@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -53,6 +54,7 @@ header {
     margin-inline: 4px;
     transition: .7s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
+    animation-fill-mode: unset !important;
     z-index: 999;
     -webkit-transition: .7s;
     -moz-transition: .7s;
@@ -87,20 +89,26 @@ header button {
     visibility: visible;
 }
 
+.overflow{
+    max-height: 50vh;
+    overflow: auto;
+    width: 100%;
+}
+
 .add-player__form--inputs {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-height: 50vh;
-    overflow: auto;
+    width: fit-content;
+    margin: auto;
 }
 
 .add-player__form--inputs input {
     border-radius: 0.8rem;
     background: var(--bg-body);
-    box-shadow: inset 5px 5px 10px var(--bg-header), inset -5px -5px 10px var(--bg-body), 0px 0px 100px rgba(255, 212, 59, 0), 0px 0px 100px rgba(255, 102, 0, 0);
+    box-shadow: inset 5px 5px 10px var(--bg-header), inset -5px -5px 10px var(--bg-body);
     padding-inline: 1rem;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     color: var(--primary-color);
     font-size: 20px;
     transition: 0.2s;
@@ -115,7 +123,7 @@ header button {
 }
 
 .add-player__form--inputs input:focus {
-    border: 1px solid var(--light-color);
+    border: 2px solid var(--light-color);
     outline: none;
 }
 
@@ -185,6 +193,12 @@ header button {
     flex-wrap: wrap;
     row-gap: 40px;
     padding-inline: 12px;
+}
+
+.player-count{
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
 }
 
 .winner,
@@ -261,6 +275,18 @@ header button {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+}
+
+.copyright{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.copyright a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 @keyframes l21 {
