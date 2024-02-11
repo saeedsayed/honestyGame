@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class='dark'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الصراحة</title>
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="assets/image/favIcon.png" type="image/x-icon">
+    <!-- font-awesome v6.4.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animate css cdn v4.1.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="animate__animated animate__bounceInDown">
+        <div class="add-player">
+            <button id="openForm">اضافة لاعبين <i class="fa-solid fa-plus"></i></button>
+            <div class="add-player__form">
+                <div class="overflow">
+                    <div class="add-player__form--inputs">
+                        <div>1: <input type="text" placeholder="ادخل اسم اللاعب"></div>
+                        <div>2: <input type="text" placeholder="ادخل اسم اللاعب"></div>
+                    </div>
+                </div>
+
+                <button id="addInputToForm">+</button>
+                <button id="addPlayerBtn">اضافة الاسماء <i class="fa-solid fa-check"></i></button>
+                <button id="closeForm">الغاء <i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <button class="theme-mode dark">🌙🔆</button>
+    </header>
+    <div class="body">
+        <h2 class="player-count ainmate__animated animate__bounceIn"></h2>
+                <div class="winner ">
+            <h2>الفائز</h2>
+            <p class="win-name"></p>
+        </div>
+        <div class="loser">
+            <h2>الخاسر</h2>
+            <p class="lose-name"></p>
+        </div>
+
+        <button class="btn-play animate__animated animate__bounceInUp">ابداء</button>
+        <div class="copyright">created with eng: ^_^<a href="https://saeed-dev-v2.netlify.app"
+                target="_blank">saeed</a></div>
+    </div>
+    <!-- js file -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
